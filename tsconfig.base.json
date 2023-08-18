@@ -1,0 +1,49 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@agroloc/account/api": ["libs/account/api/src/index.ts"],
+      "@agroloc/account/data-access": ["libs/account/data-access/src/index.ts"],
+      "@agroloc/account/data-source": ["libs/account/data-source/src/index.ts"],
+      "@agroloc/account/domain": ["libs/account/domain/src/index.ts"],
+      "@agroloc/account/feature": ["libs/account/feature/src/index.ts"],
+      "@agroloc/account/resource": ["libs/account/resource/src/index.ts"],
+      "@agroloc/home/feature-about": ["libs/home/feature-about/src/index.ts"],
+      "@agroloc/home/feature-shell-mob": [
+        "libs/home/feature-shell-mob/src/index.ts"
+      ],
+      "@agroloc/home/feature-shell-web": [
+        "libs/home/feature-shell-web/src/index.ts"
+      ],
+      "@agroloc/home/ui-content": ["libs/home/ui-content/src/index.ts"],
+      "@agroloc/home/ui-sidenav": ["libs/home/ui-sidenav/src/index.ts"],
+      "@agroloc/home/ui-toolbar": ["libs/home/ui-toolbar/src/index.ts"],
+      "@agroloc/machine/api": ["libs/machine/api/src/index.ts"],
+      "@agroloc/machine/data-access": ["libs/machine/data-access/src/index.ts"],
+      "@agroloc/machine/data-source": ["libs/machine/data-source/src/index.ts"],
+      "@agroloc/machine/domain": ["libs/machine/domain/src/index.ts"],
+      "@agroloc/machine/feature": ["libs/machine/feature/src/index.ts"],
+      "@agroloc/machine/resource": ["libs/machine/resource/src/index.ts"],
+      "@agroloc/rent/api": ["libs/rent/api/src/index.ts"],
+      "@agroloc/rent/data-access": ["libs/rent/data-access/src/index.ts"],
+      "@agroloc/rent/data-source": ["libs/rent/data-source/src/index.ts"],
+      "@agroloc/rent/domain": ["libs/rent/domain/src/index.ts"],
+      "@agroloc/rent/feature": ["libs/rent/feature/src/index.ts"],
+      "@agroloc/rent/resource": ["libs/rent/resource/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
