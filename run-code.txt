@@ -1,0 +1,42 @@
+npm i -D @nx/nest @nx/angular @nx/js
+npx nx generate @nx/nest:application back --e2eTestRunner=none --tags=type:app,side:server --no-interactive
+npx nx generate @nx/angular:application front --e2eTestRunner=none --style=scss --routing --tags=type:app,side:client --no-interactive
+npx nx generate @nx/angular:library feature --directory=account --tags=type:feature,scope:account --style=scss --routing
+npx nx generate @nx/angular:component account-feature --flat --project=account-feature --no-interactive
+npx nx generate @nx/nest:library resource --directory=account --tags=type:resource,scope:account
+npm i @nestjs/mapped-types
+rm libs/account/resource/src/lib/account-resource.module.ts
+npx nx generate @nx/nest:resource --name=account-resource --type=rest --crud --project=account-resource --path=lib --flat --no-interactive
+npx nx generate @nx/nest:library data-source --directory=account --tags=type:data-source,scope:account --no-interactive
+npx nx generate @nx/js:library api --bundler=tsc --unitTestRunner=jest --directory=account --tags=type:api,scope:account --no-interactive
+npx nx generate @nx/js:library domain --bundler=tsc --unitTestRunner=jest --directory=account --tags=type:domain,scope:account --no-interactive
+npx nx generate @nx/js:library data-access --bundler=tsc --unitTestRunner=jest --directory=account --tags=type:data-access,scope:account --no-interactive
+npx nx generate @nx/angular:library feature-shell-mob --directory=home --tags=type:feature,scope:home --style=scss --routing
+npx nx generate @nx/angular:component home-feature-shell-mob --flat --project=home-feature-shell-mob --no-interactive
+npx nx generate @nx/angular:library feature-shell-web --directory=home --tags=type:feature,scope:home --style=scss --routing
+npx nx generate @nx/angular:component home-feature-shell-web --flat --project=home-feature-shell-web --no-interactive
+npx nx generate @nx/angular:library feature-about --directory=home --tags=type:feature,scope:home --style=scss --routing
+npx nx generate @nx/angular:component home-feature-about --flat --project=home-feature-about --no-interactive
+npx nx generate @nx/angular:library ui-toolbar --directory=home --tags=type:ui,scope:home --style=scss --no-interactive
+npx nx generate @nx/angular:library ui-content --directory=home --tags=type:ui,scope:home --style=scss --no-interactive
+npx nx generate @nx/angular:library ui-sidenav --directory=home --tags=type:ui,scope:home --style=scss --no-interactive
+npx nx generate @nx/angular:library feature --directory=machine --tags=type:feature,scope:machine --style=scss --routing
+npx nx generate @nx/angular:component machine-feature --flat --project=machine-feature --no-interactive
+npx nx generate @nx/nest:library resource --directory=machine --tags=type:resource,scope:machine
+npm i @nestjs/mapped-types
+rm libs/machine/resource/src/lib/machine-resource.module.ts
+npx nx generate @nx/nest:resource --name=machine-resource --type=rest --crud --project=machine-resource --path=lib --flat --no-interactive
+npx nx generate @nx/nest:library data-source --directory=machine --tags=type:data-source,scope:machine --no-interactive
+npx nx generate @nx/js:library api --bundler=tsc --unitTestRunner=jest --directory=machine --tags=type:api,scope:machine --no-interactive
+npx nx generate @nx/js:library domain --bundler=tsc --unitTestRunner=jest --directory=machine --tags=type:domain,scope:machine --no-interactive
+npx nx generate @nx/js:library data-access --bundler=tsc --unitTestRunner=jest --directory=machine --tags=type:data-access,scope:machine --no-interactive
+npx nx generate @nx/angular:library feature --directory=rent --tags=type:feature,scope:rent --style=scss --routing
+npx nx generate @nx/angular:component rent-feature --flat --project=rent-feature --no-interactive
+npx nx generate @nx/nest:library resource --directory=rent --tags=type:resource,scope:rent
+npm i @nestjs/mapped-types
+rm libs/rent/resource/src/lib/rent-resource.module.ts
+npx nx generate @nx/nest:resource --name=rent-resource --type=rest --crud --project=rent-resource --path=lib --flat --no-interactive
+npx nx generate @nx/nest:library data-source --directory=rent --tags=type:data-source,scope:rent --no-interactive
+npx nx generate @nx/js:library api --bundler=tsc --unitTestRunner=jest --directory=rent --tags=type:api,scope:rent --no-interactive
+npx nx generate @nx/js:library domain --bundler=tsc --unitTestRunner=jest --directory=rent --tags=type:domain,scope:rent --no-interactive
+npx nx generate @nx/js:library data-access --bundler=tsc --unitTestRunner=jest --directory=rent --tags=type:data-access,scope:rent --no-interactive
